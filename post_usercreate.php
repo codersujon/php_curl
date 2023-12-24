@@ -6,7 +6,7 @@
     }
 
     $handle = curl_init();
-    
+
     $url = "https://reqres.in/api/users";
 
     ## POST DATA
@@ -26,7 +26,7 @@
 
     if($e = curl_error($handle)){
         echo $e;
-    }{
+    }else{
        $decoded  = json_decode($output, true);
     }
 
